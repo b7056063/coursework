@@ -6,6 +6,10 @@ import os
 
 #convert fasta files to genbank files
 def fasta2genbank(test_fasta,test_gb):
+    '''This is a function for converting fasta files to genbank files,
+
+    open terminal and type: python3 coursework.py filename.fasta gbk,
+    then you will get a file named test_gb. enjoy it.'''
     input_handle=open(test_fasta,"rU")
     output_handle=open(test_gb,"w")
 
@@ -22,7 +26,7 @@ def fasta2genbank(test_fasta,test_gb):
     
 #convert fasta files to csv files
 #creat a list which can contain all information
-class Curve():
+class Csv():
 
     def __init__(self,*items):
         self.items=[]
@@ -30,8 +34,8 @@ class Curve():
             self.append(i)
 
     def append(self,item):
-        if not isinstance(item,Curve2):
-             raise TypeError("Curves can only take Curve2")
+        if not isinstance(item,Csv2):
+             raise TypeError("Csv can only take Csv2")
         self.items.append(item)
     def __str__(self):
         return "{}".format(self.items)
@@ -40,7 +44,7 @@ class Curve():
         s=s.join([repr(x) for x in self.items])
         return "{}".format(s)
 
-class Curve2():
+class Csv2():
         
     def __init__(self,*items):
         self.items=list(items);
@@ -52,6 +56,10 @@ class Curve2():
         return "{}".format(self.items)
     
 def fasta2csv(fastafile,csvfile):
+    '''This is a function for converting fasta files to csv files,
+
+    open terminal and type: python3 coursework.py filename.fasta csv,
+    then you will get a file named test_csv. enjoy it.'''
 
     #the csv title
     columns=['seq_id','sequence']
