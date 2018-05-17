@@ -93,6 +93,10 @@ def fasta2csv(fastafile,csvfile):
 @click.option('-o', type=click.File('w'), help='txt file')
 
 def fasta2txt(f, t):
+    '''This is a function for converting fasta files to txt files,
+
+    open terminal and type: python3 coursework.py filename.fasta txt,
+    then you will get a file named test.txt. enjoy it.'''
     for line in f:
         if line.startswith(">"):
             lin = line.strip().split()[0][1:]
