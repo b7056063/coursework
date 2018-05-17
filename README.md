@@ -17,3 +17,5 @@ e.g. type: python3 coursework.py filename.fasta gbk and csv.
 if you want to get a txt file,
 e.g. type: python3 coursework.py filename.fasta txt.
 There is a sample file in the document named 'sample.fasta' for testing.
+# Warning
+Sometimes this program will show a warning about some kind of information exceeds the length when it is running, this warning doesn't affect the result, don't worry about that.
