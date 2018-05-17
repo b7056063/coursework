@@ -103,6 +103,8 @@ def fasta2txt(f, t):
             t.writelines('\n' + lin + '\t')
         else:
             t.writelines(line.strip())
+if __name__=='__main__':
+    fasta2txt()
 #user input
 if sys.argv[2]=='gbk':
     fasta2genbank(sys.argv[1],"test_gb")
